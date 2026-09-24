@@ -35,7 +35,7 @@ A reproducible portfolio project analysing **synthetic retail order data for Jan
 | 2025 | 5 | £2,440 | £726 | 29.75% |
 | 2026 | 5 | £3,050 | £1,166 | 38.23% |
 
-![Revenue and profit chart](charts/yearly_revenue_profit.png)
+![Revenue and profit chart](yearly_revenue_profit.png)
 
 **Selected observations**
 
