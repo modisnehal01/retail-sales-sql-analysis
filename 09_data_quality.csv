@@ -1,0 +1,2 @@
+﻿customers,products,orders,order_items,orders_without_customer,items_without_order,items_without_product,invalid_line_items
+6,6,18,24,0,0,0,0
