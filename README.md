@@ -51,36 +51,31 @@ A reproducible portfolio project analysing **synthetic retail order data for Jan
 
 ## Project files
 
-```text
 retail-sales-sql-analysis/
 ├── README.md
-├── sql/
-│   ├── 01_create_tables.sql
-│   ├── 02_insert_data.sql
-│   └── 03_business_analysis.sql
-├── results/
-│   ├── 01_yearly_performance.csv
-│   ├── 02_yoy_growth.csv
-│   ├── 03_monthly_performance.csv
-│   ├── 04_product_performance.csv
-│   ├── 05_country_performance.csv
-│   ├── 06_customer_performance.csv
-│   ├── 07_category_performance.csv
-│   ├── 08_order_status.csv
-│   └── 09_data_quality.csv
-└── charts/
-    └── yearly_revenue_profit.png
-```
+├── 01_create_tables.sql
+├── 02_insert_data.sql
+├── 03_business_analysis.sql
+├── 01_yearly_performance.csv
+├── 02_yoy_growth.csv
+├── 03_monthly_performance.csv
+├── 04_product_performance.csv
+├── 05_country_performance.csv
+├── 06_customer_performance.csv
+├── 07_category_performance.csv
+├── 08_order_status.csv
+├── 09_data_quality.csv
+└── yearly_revenue_profit.png
 
 ## How to reproduce
 
-1. Open a **fresh SQLite database** in [SQLite Online](https://sqliteonline.com/) or in a local SQLite client. Do not run the table creation script over a populated database.
-2. Run [`01_create_tables.sql`](sql/01_create_tables.sql) once.
-3. Run [`02_insert_data.sql`](sql/02_insert_data.sql) once.
-4. Run the nine queries in [`03_business_analysis.sql`](sql/03_business_analysis.sql) **individually**; each query is numbered and ends with `;`. Some web-based SQLite editors display only the last result if all queries are run together.
-5. Compare the results with the exported CSV files in [`results/`](results/). The ninth query checks table row counts, missing foreign-key matches and invalid line items.
+1. Open a fresh SQLite database in [SQLite Online](https://sqliteonline.com/) or a local SQLite client.
+2. Run [01_create_tables.sql](01_create_tables.sql) to create the four tables.
+3. Run [02_insert_data.sql](02_insert_data.sql) to insert the synthetic dataset.
+4. Run the nine queries in [03_business_analysis.sql](03_business_analysis.sql) individually.
+5. Compare the outputs with the CSV result files in this repository, starting with [yearly performance](01_yearly_performance.csv).
 
-A local SQLite CLI alternative is: `sqlite3 retail_sales.db ".read sql/01_create_tables.sql"`, followed by the same command with `02_insert_data.sql`. Then run individual analysis queries in the SQLite client.
+The queries cover revenue, profitability, year-over-year growth, monthly trends, product and customer performance, and data-quality checks.
 
 ## Interpretation and limitations
 
