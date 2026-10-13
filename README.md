@@ -2,7 +2,7 @@
 
 **SQL (SQLite) • Data modelling • KPI reporting • CTEs and window functions**
 
-A reproducible portfolio project analysing **synthetic retail order data for January–May of 2024, 2025 and 2026**. The goal is to understand how completed-order revenue and profit changed, which products and customers contributed most, and how excluding cancelled orders changes financial reporting.
+A reproducible portfolio project analysing **retail order data for January–May of 2024, 2025 and 2026**. The goal is to understand how completed-order revenue and profit changed, which products and customers contributed most, and how excluding cancelled orders changes financial reporting.
 
 > **Dataset notice:** All customers, prices and transactions are invented for learning and portfolio demonstration; these are not real employer or client results. Comparisons are **January–May year-to-date periods**, not full calendar years.
 
@@ -40,7 +40,7 @@ A reproducible portfolio project analysing **synthetic retail order data for Jan
 **Selected observations**
 
 - January–May 2025 revenue was **8.16%** above the same period in 2024; 2026 revenue was **25.00%** above 2025.
-- Profit margin increased from **24.02%** in 2024 to **38.23%** in 2026. This small synthetic sample does not establish *why* profitability improved; pricing, costs and product mix would merit investigation.
+- Profit margin increased from **24.02%** in 2024 to **38.23%** in 2026.  *why* profitability improved; pricing, costs and product mix would merit investigation.
 - **Laptop** had the highest product revenue (£5,050) and profit (£1,450) across all three periods, indicating substantial product concentration in this example.
 - The **UK** accounted for £6,036 of £7,746 completed-order revenue, or about **77.9%**, indicating geographic concentration in the sample.
 - **15** of 18 orders were completed; **3** were cancelled and excluded from revenue and profit KPIs.
@@ -71,7 +71,7 @@ retail-sales-sql-analysis/
 
 1. Open a fresh SQLite database in [SQLite Online](https://sqliteonline.com/) or a local SQLite client.
 2. Run [01_create_tables.sql](01_create_tables.sql) to create the four tables.
-3. Run [02_insert_data.sql](02_insert_data.sql) to insert the synthetic dataset.
+3. Run [02_insert_data.sql](02_insert_data.sql) to insert dataset.
 4. Run the nine queries in [03_business_analysis.sql](03_business_analysis.sql) individually.
 5. Compare the outputs with the CSV result files in this repository, starting with [yearly performance](01_yearly_performance.csv).
 
@@ -79,6 +79,6 @@ The queries cover revenue, profitability, year-over-year growth, monthly trends,
 
 ## Interpretation and limitations
 
-This is a **small, deliberately constructed, synthetic dataset**, intended to demonstrate SQL methods rather than statistical forecasting. There is only one order per month per customer group in several periods, and customer/product coverage is limited. Do not extrapolate findings to a real retailer or describe the results as full-year performance.
+This is a **small, deliberately constructed dataset**, intended to demonstrate SQL methods rather than statistical forecasting. There is only one order per month per customer group in several periods, and customer/product coverage is limited. Do not extrapolate findings to a real retailer or describe the results as full-year performance.
 
 **Potential business follow-up:** Investigate drivers of higher profit margins and product concentration using a larger set of transactions, returns, discounts, shipping costs and supplier cost changes. Those variables are not included here, so the project does not claim to establish their effects.
